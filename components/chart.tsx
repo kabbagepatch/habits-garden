@@ -10,7 +10,7 @@ export default function WeeklyChart({ habit }: { habit: Habit }) {
   const color = habit.color;
   const frequency = habit.frequency;
   const { width } = useWindowDimensions();
-  const weeklyData = getWeeklyCheckIns(habit, Math.max(Math.floor(width / 35), 12));
+  const weeklyData = getWeeklyCheckIns(habit, Math.max(Math.floor(width / 40), 10));
   const { mode } = useTheme();
 
   return (
@@ -71,6 +71,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-end',
     height: MAX_BAR_HEIGHT,
+    minWidth: 30,
   },
   count: {
     width: '100%',

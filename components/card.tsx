@@ -22,7 +22,7 @@ export default function HabitCard({ id, item, mode='calendar', onCheck }: Props)
       <View style={styles.habit}>
         <View style={styles.habitNameContainer}> 
           <Text style={[styles.habitName, { color: (item.color || 'hsl(0, 0%, 60%)') }]} onPress={() => router.navigate(`/${item.id}`)}>
-            {item.name}
+            {item.name} ({item.currentStreak})
           </Text>
           <Text style={{ color: (item.color || 'hsl(0, 0%, 60%)') }} onPress={() => router.navigate(`/${item.id}`)}>
             {item.frequency} x
